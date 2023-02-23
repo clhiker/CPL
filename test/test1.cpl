@@ -1,0 +1,41 @@
+Mission{
+  MissionID:1;
+  MissionName:"identify_x";
+  Priority:1;
+  int x;
+  x = 1;
+  float y;
+  y = 1.9;
+  char aa[31];
+  int a;
+  float b, c;
+  int www, abc;
+  float j, k=8.0, m, l =1.0 ;
+  int req;
+  int res;
+
+  ComponentList{
+    Component{
+      ComponentID:1;
+      ComponentName:"controller";
+    }
+  }
+
+  Observation{
+    From "add_a":a;
+    From "add_b":b;
+    From "get_request":req;
+  }
+  Orientation{
+    plus a, b, res;
+  }
+  Decision{
+    de_gt req, x;
+  }
+  Action{
+    To "add_res":a;
+    To "add_res":a;
+  }
+}
+
+

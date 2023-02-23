@@ -1,0 +1,52 @@
+
+Mission{
+  MissionID:1;
+  MissionName:"identify_x";
+  Priority:1;
+  int bb;
+  int aa=1;
+  int a, b,req,res,x=2;
+  char ss[31];
+  char ss1[31]="abcdefg";
+  float c=3.14;
+  float d;
+  d = 90.33;
+  float g,h,i, j = 9.3;
+
+  ComponentList{
+    Component{
+      ComponentID:1;
+      ComponentName:"controller";
+    }
+    Component{
+      ComponentID:2;
+      ComponentName:"camera";
+    }
+  }
+
+  Observation{
+    From "add_a":a;
+    From "add_b":b;
+    From "get_request":req;
+  }
+  Orientation{
+    plus a, b, res;
+    plus a, b, res;
+    minus a,b, res;
+    times a,b, res;
+    devide a,b, res;
+    neq a, b, x;
+    not req, x;
+  }
+  Decision{
+    de_gt req, x;
+    de_gt req, x;
+    de_gt req, x;
+    de_neq req, x;
+  }
+  Action{
+    To "add_res":a;
+    To "add_res":a;
+    To "add_res":a;
+  }
+}

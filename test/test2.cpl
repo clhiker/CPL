@@ -1,0 +1,34 @@
+Mission{
+  MissionID:1;
+  MissionName:"identify_x";
+  Priority:1;
+  int a, b,req,res,x;
+
+  ComponentList{
+    Component{
+      ComponentID:1;
+      ComponentName:"controller";
+    }
+    Component{
+      ComponentID:2;
+      ComponentName:"camera";
+    }
+  }
+
+  Observation{
+    From "add_a":a;
+    From "add_b":b;
+    From "get_request":req;
+  }
+  Orientation{
+    plus a, b, res;
+  }
+  Decision{
+    de_gt req, x;
+  }
+  Action{
+    To "add_res":a;
+  }
+}
+
+

@@ -1,0 +1,28 @@
+
+Mission{
+  MissionID:1;
+  MissionName:"identify_x";
+  Priority:1;
+  int x11=-1, x22=1;
+  int a, b, x, req, res;
+
+  ComponentList{
+    Component{
+      ComponentID:1;
+      ComponentName:"controller";
+    }
+  }
+
+  Observation{
+    From "add_a":a; 
+  }
+  Orientation{
+    plus a, b, res;
+  }
+  Decision{
+    de_gt req, x;
+  }
+  Action{
+    To "add_res":a;
+  }
+}

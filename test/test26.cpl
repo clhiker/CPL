@@ -1,0 +1,32 @@
+
+Mission{
+  MissionID:1;
+  MissionName:"identify_x";
+  Priority:1;
+  int x11=-1, x22=1;
+  int t11, t22=1, t33=1, t44=3;
+  int r11, r22=1, r33, r44=3;
+  float y11=-1.0, y22=1.0;
+  float fy1, fy2=1.0, fy3=9.0;
+  int a, b, x, req, res;
+
+  ComponentList{
+    Component{
+      ComponentID:1;
+      ComponentName:"controller";
+    }
+  }
+
+  Observation{
+    From "add_a":a; 
+  }
+  Orientation{
+    plus a, b, res;
+  }
+  Decision{
+    de_gt req, x;
+  }
+  Action{
+    To "add_res":a;
+  }
+}

@@ -1,0 +1,81 @@
+
+Mission{
+  MissionID:1;
+  MissionName:"identify_x";
+  Priority:1;
+  int bb;
+  int aa=1;
+  int x1, x2;
+  int x11=1, x22;
+  int x111, x222=1;
+  int y1, y2=1, y3;
+  int a, b,req,res,x=2;
+  char ss[31];
+  char ss1[31]="123abcdefg";
+  float c=3.14;
+  float d;
+  d = 90.33;
+  float g,h,i, j = 9.3;
+  float f1, f2;
+  float f11=1.0; 
+  float f111, f222=1.0;
+  float fy1, fy2=1.0, fy3;
+
+  ComponentList{
+    Component{
+      ComponentID:1;
+      ComponentName:"controller";
+    }
+    Component{
+      ComponentID:2;
+      ComponentName:"camera";
+    }
+ Component{
+      ComponentID:3;
+      ComponentName:"image_recognizer";
+    }
+    Component{
+      ComponentID:4;
+      ComponentName:"Communicator";
+    }
+    Component{
+      ComponentID:5;
+      ComponentName:"General_component";
+    }
+  }
+
+  Observation{
+    From "add_a":a; 
+    From "add_b":b;
+    From "get_request":req;
+  }
+  Orientation{
+    plus a, b, res;
+    plus a, b, res;
+    minus a,b, res;
+    times a,b, res;
+    devide a,b, res;
+    neq a, b, x;
+    not req, x;
+    or res,req,res;
+    and res,req,res;
+    eq a,c,res;
+    neq a,c,res;
+    ge x,c,ss;
+  }
+  Decision{
+    de_gt req, x;
+    de_gt req, x;
+    de_gt req, x;
+    de_neq req, x;
+    de_ge aa, c;
+    de_le 6.999,88; //num
+    de_gt ss,ss1;
+    de_lt bb,ss1;
+  }
+  Action{
+    To "add_res":a;
+    To "add_res":a;
+    To "add_res":a;
+  }
+}
